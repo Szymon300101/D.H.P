@@ -17,7 +17,7 @@ Używanie programu:
 -Liczby w nawiasach to klucze prywatne, które powinny byś ukryte  
 -Oba okna uzyskają ten sam klucz wynikowy.  
   
-Przykładowe dziełanie konsoli:  
+Przykładowe działanie konsoli:  
   ![](console.PNG)  
   
 Uwagi techniczne:  
