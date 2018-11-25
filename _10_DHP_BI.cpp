@@ -3,9 +3,9 @@
 #include "..\@lib\BigInteger\BigInteger.cpp"
 #include "..\@lib\Resource.hpp"
 
-#define aMAX 100
-#define nMAX 400
-#define kMAX 1000
+#define aMAX 100 //maksymalna wartość parametru a
+#define nMAX 400 //maksymalna wartość parametru n
+#define kMAX 1000 //maksymalna wartość klucza prywatnego urzytkowników
 
 using namespace std;
 
@@ -44,7 +44,7 @@ int main()
             KA=rGen(0,kMAX,randC);
             KpA=bigPow(a,KA)%n;
         }
-        cout<<"a mod n"<<endl;
+        //cout<<"a mod n"<<endl;
                 t=a;
         cout<<"a= "<<t<<endl;
                 t=n;
@@ -53,33 +53,33 @@ int main()
         cout<<"("<<t<<")"<<endl;
                 t=KpA;
         cout<<"Klucz publiczny ALICE: "<<t<<endl;
-                t=a;
-        cout<<"power("<<t;
-                t=KA;
-        cout<<","<<t;
-                t=n;
-        cout<<")%"<<t;
-                t=KpA;
-        cout<<"="<<t<<endl<<endl;
+        //        t=a;
+        //cout<<"power("<<t;
+        //        t=KA;
+        //cout<<","<<t;
+        //        t=n;
+        //cout<<")%"<<t;
+        //        t=KpA;
+        //cout<<"="<<t<<endl<<endl;
         cout<<"Podaj klucz publiczny BOBa: "; cin>>in;
         BigInteger KpB = in;
          //  x=pow(KpB,KA);
         BigInteger Key=bigPow(KpB,KA)%n;
         //cout<<"power("<<KpB<<","<<KA<<")%"<<n<<"="<<Key<<endl;
                 t=KpB;
-        cout<<"power("<<t;
-                t=KA;
-        cout<<","<<t;
-                t=n;
-        cout<<")%"<<t;
-                t=Key;
-        cout<<"="<<t<<endl<<endl;
+        //cout<<"power("<<t;
+        //        t=KA;
+        //cout<<","<<t;
+        //        t=n;
+        //cout<<")%"<<t;
+        //        t=Key;
+        //cout<<"="<<t<<endl<<endl;
                 t=Key;
         cout<<"Wspolny klocz = ("<<t<<")";
     }else
     {
 
-        cout<<"a mod n:"<<endl;
+        //cout<<"a mod n:"<<endl;
         cout<<"Podaj a: "; cin>>in;
         BigInteger a=in;
         cout<<"Podaj n: "; cin>>in;
@@ -89,30 +89,30 @@ int main()
         BigInteger KB=rGen(0,kMAX,randC);   //klucz prywatny BOBa
         if(KB==1)
             KB=rGen(0,kMAX,randC);
-        BigInteger KpB=bigPow(a,KB)%n;  //klusz publiczny ALICE
+        BigInteger KpB=bigPow(a,KB)%n;  //klusz publiczny BOBa
                 t=KB;
         cout<<"("<<t<<")";
                 t=KpB;
         cout<<endl<<"Klucz publiczny BOBa: "<<t<<endl;
        //     <<"power("<<a<<","<<KB<<")%"<<n<<"="<<KpB<<endl;
                 t=a;
-        cout<<"power("<<t;
-                t=KB;
-        cout<<","<<t;
-                t=n;
-        cout<<")%"<<t;
-                t=KpB;
-        cout<<"="<<t<<endl<<endl;
+        //cout<<"power("<<t;
+        //        t=KB;
+        //cout<<","<<t;
+        //        t=n;
+        //cout<<")%"<<t;
+        //        t=KpB;
+        //cout<<"="<<t<<endl<<endl;
         BigInteger Key=bigPow(KpA,KB)%n;
         //cout<<"power("<<KpA<<","<<KB<<")%"<<n<<"="<<Key<<endl;
-                t=KpA;
-        cout<<"power("<<t;
-                t=KB;
-        cout<<","<<t;
-                t=n;
-        cout<<")%"<<t;
-                t=Key;
-        cout<<"="<<t<<endl<<endl;
+        //        t=KpA;
+        //cout<<"power("<<t;
+        //        t=KB;
+        //cout<<","<<t;
+        //        t=n;
+        //cout<<")%"<<t;
+        //        t=Key;
+        //cout<<"="<<t<<endl<<endl;
         t=Key;
         cout<<"Wspolny klocz = ("<<t<<")";
     }
