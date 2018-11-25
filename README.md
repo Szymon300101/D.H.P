@@ -15,8 +15,10 @@ Używanie programu:
 -Ustawić numer urzytkownika w każdym z nich (0-ALICE, 1-BOB)  
 -Zasymulować komunikację- do okna BOBa podać a,n i publiczny klucz ALICE, następnie zwrócić klucz publiczny BOBa  
 -Liczby w nawiasach to klucze prywatne, które powinny byś ukryte  
--Oba okna uzyskają ten sam klucz wynikowy.
+-Oba okna uzyskają ten sam klucz wynikowy.  
   
+Przykładowe dziełanie konsoli:  
+  ![](console.PNG)  
   
 Uwagi techniczne:  
 -progrm używa biloteki BigIntiger z powodu dużych liczb momentami pojawiających się podczas działania programu (podczas potengowania).  
