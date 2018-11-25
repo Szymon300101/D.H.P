@@ -18,9 +18,9 @@ Używanie programu:
 -Oba okna uzyskają ten sam klucz wynikowy.
   
   
-Uwagi techniczne:
+Uwagi techniczne:  
 -progrm używa biloteki BigIntiger z powodu dużych liczb momentami pojawiających się podczas działania programu (podczas potengowania).  
 -poza tym używa funkcji rGen() i rGenPrime() z mojej biblioteki Resource.hpp (funkcje losujące z urzyciem random.h).  
--powinienem użyć algorytmu potęgowania z resztą, ale jak to pisałem to do jeszcze nie znałem, więc jest napisane na około (najpierw potęgownie, a potem reszta, przez co musze używać BigIntiger'a).  
+-powinienem użyć algorytmu potęgowania z resztą, ale jak to pisałem to do jeszcze nie znałem, więc jest napisane na około (najpierw potęgownie, a potem reszta, przez co muszę używać BigIntiger'a).  
 -nie jestem pewien czy działa całkowicie dobrze, bo stosunkowo często kluczem wspólnym okazuje się 1 albo któryś z kluczy publicznych.  
 -program ma wykomentowane dużo 'printów' operacji które wykonuje.  
